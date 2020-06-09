@@ -1,0 +1,50 @@
+{{define "corona"}}
+    {{template "headers"}}
+    {{template "sidebars"}}
+    <script>
+        $(document).ready(function () {
+            var d = new Date();
+            $("#date").html(d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear());
+            $.ajax({
+                url: "https://api.kawalcorona.com/indonesia/", success: function (result) {
+                    $("#terjangkit").html(result[0].positif + " orang");
+                    $("#sembuh").html(result[0].sembuh + " orang");
+                    $("#meninggal").html(result[0].meninggal + " orang");
+                }
+            });
+        });
+
+        $(document).ready(function () {
+            $.ajax({
+                url: "https://api.kawalcorona.com/indonesia/provinsi", success: function (result) {
+                    $("#Globalterjangkit").html(result[0].Kasus_Posi + " orang");
+                }
+            });
+        });
+    </script>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <h1 style="text-align: center;">Update Info COVID-19
+            <span id="date"></span>
+        </h1>
+        Indonesia
+        <div style="padding: 10px; background-color:#F0F8FF; text-align: left;">
+            Terjangkit : <span id='terjangkit'></span>
+            <br>
+            Sembuh : <span id='sembuh'></span>
+            <br>
+            Meninggal : <span id='meninggal'></span>
+        </div>
+        <br>
+        Global
+        <div style="padding: 10px; background-color:#F0F8FF; text-align: left;">
+            Terjangkit : <span id='Globalterjangkit'></span>
+            <br>
+            Sembuh : <span id='sembuh'></span>
+            <br>
+            Meninggal : <span id='meninggal'></span>
+        </div>
+        <small style="float: right;">sumber : kawalcorona.com</small>
+    </div>
+
+    {{template "footers"}}
+{{end}}

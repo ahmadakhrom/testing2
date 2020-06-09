@@ -1,0 +1,220 @@
+{{define "sidebars"}}
+
+    <div class="page-wrapper chiller-theme toggled">
+        <a id="show-sidebar" class="btn btn-sm btn-dark" href="#">
+            <i class="fas fa-bars"></i>
+        </a>
+        <nav id="sidebar" class="sidebar-wrapper">
+            <div class="sidebar-content">
+                <div class="sidebar-brand">
+                    <a href="/">GO SPACE</a>
+                    <div id="close-sidebar">
+                        <i class="fas fa-times"></i>
+                    </div>
+                </div>
+                <div class="sidebar-header">
+                    <div class="user-pic">
+                        <img class="img-responsive img-rounded"
+                             src="https://raw.githubusercontent.com/azouaoui-med/pro-sidebar-template/gh-pages/src/img/user.jpg"
+                             alt="User picture">
+                    </div>
+                    <div class="user-info">
+          <span class="user-name">Ahmad
+            <strong>Akhrom</strong>
+          </span>
+                        <span class="user-role">Administrator</span>
+                        <span class="user-status">
+            <i class="fa fa-circle"></i>
+            <span>Online</span>
+          </span>
+                    </div>
+                </div>
+                <div class="sidebar-menu">
+                    <ul>
+                        <li class="header-menu">
+                            <span>Menu</span>
+                        </li>
+                        <li>
+                            <a href="/">
+                                <i class="fa fa-tachometer-alt"></i>
+                                <span>Dashboard</span>
+                                {{/*<span class="badge badge-pill badge-primary">Beta</span>*/}}
+                            </a>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-globe"></i>
+                                <span>Covid-19 data</span>
+                                {{/*<span class="badge badge-pill badge-danger">3</span>*/}}
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="/corona/api/data">Data indonesia</a>
+                                    </li>
+                                    <li>
+                                        <a href="/corona/api/global">Dashboard global</a>
+                                    </li>
+                                    <li>
+                                        <a href="/corona/api/testing">Data sample</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-exchange-alt"></i>
+                                <span>Transaction</span>
+                                {{/*<span class="badge badge-pill badge-danger">3</span>*/}}
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Orders</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">On going</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Returns</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>Katalog</span>
+                                {{/*<span class="badge badge-pill badge-danger">3</span>*/}}
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="/book/list">Book</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Magazine</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">News paper</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Comic</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">other</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-user-cog"></i>
+                                <span>Role user</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="/admin/user/list">List users</a>
+                                    </li>
+                                    <li>
+                                        <a href="/admin/user/add">Add user</a>
+                                    </li>
+                                    {{/*                                    <li>*/}}
+                                    {{/*                                        <a href="#">Bar chart</a>*/}}
+                                    {{/*                                    </li>*/}}
+                                    {{/*                                    <li>*/}}
+                                    {{/*                                        <a href="#">Histogram</a>*/}}
+                                    {{/*                                    </li>*/}}
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="sidebar-dropdown">
+                            <a href="#">
+                                <i class="fa fa-cogs"></i>
+                                <span>Setting</span>
+                            </a>
+                            <div class="sidebar-submenu">
+                                <ul>
+                                    <li>
+                                        <a href="#">Google maps</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Open street map</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <a href="/logout">
+                                <i class="fa fa-sign-out-alt"></i>
+                                <span>Logout</span>
+                                {{/*<span class="badge badge-pill badge-primary">Beta</span>*/}}
+                            </a>
+                        </li>
+                        {{/*                        <li class="header-menu">*/}}
+                        {{/*                            <span>Other</span>*/}}
+                        {{/*                        </li>*/}}
+                        {{/*                        <li>*/}}
+                        {{/*                            <a href="#">*/}}
+                        {{/*                                <i class="fa fa-book"></i>*/}}
+                        {{/*                                <span>menu 1</span>*/}}
+                        {{/*                                <span class="badge badge-pill badge-primary">Beta</span>*/}}
+                        {{/*                            </a>*/}}
+                        {{/*                        </li>*/}}
+                        {{/*                        <li>*/}}
+                        {{/*                            <a href="#">*/}}
+                        {{/*                                <i class="fa fa-calendar"></i>*/}}
+                        {{/*                                <span>menu 2</span>*/}}
+                        {{/*                            </a>*/}}
+                        {{/*                        </li>*/}}
+                        {{/*                        <li>*/}}
+                        {{/*                            <a href="#">*/}}
+                        {{/*                                <i class="fa fa-folder"></i>*/}}
+                        {{/*                                <span>menu 3</span>*/}}
+                        {{/*                            </a>*/}}
+                        {{/*                        </li>*/}}
+                    </ul>
+                </div>
+                <!-- sidebar-menu  -->
+            </div>
+        </nav>
+        <main class="page-content">
+            <!-- sidebar-wrapper  -->
+            <div class="container-fluid">
+                <script>
+                    jQuery(function ($) {
+
+                        $(".sidebar-dropdown > a").click(function () {
+                            $(".sidebar-submenu").slideUp(200);
+                            if (
+                                $(this)
+                                    .parent()
+                                    .hasClass("active")
+                            ) {
+                                $(".sidebar-dropdown").removeClass("active");
+                                $(this)
+                                    .parent()
+                                    .removeClass("active");
+                            } else {
+                                $(".sidebar-dropdown").removeClass("active");
+                                $(this)
+                                    .next(".sidebar-submenu")
+                                    .slideDown(200);
+                                $(this)
+                                    .parent()
+                                    .addClass("active");
+                            }
+                        });
+
+                        $("#close-sidebar").click(function () {
+                            $(".page-wrapper").removeClass("toggled");
+                        });
+                        $("#show-sidebar").click(function () {
+                            $(".page-wrapper").addClass("toggled");
+                        });
+
+
+                    });
+                </script>
+{{end}}

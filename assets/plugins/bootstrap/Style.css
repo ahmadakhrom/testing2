@@ -1,0 +1,305 @@
+body {
+    /*font-size: 0.9rem;*/
+    margin: 0;
+    width: 100%; /*set lebar body website*/
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+
+#logo-header {
+    padding: 20px;
+    font-size: 4rem;
+    color: #0c5460;
+}
+
+
+/* start of box sidebar*/
+* {
+    box-sizing: border-box;
+}
+
+/* end of box sidebar*/
+
+/*start of login wraper*/
+
+.wrapper-login {
+    justify-content: center;
+    display: flex;
+    padding: 10%;
+}
+
+#body-form-login {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    background: whitesmoke;
+}
+
+/*start of login wraper*/
+
+
+/* navigation-page */
+#navigation-page {
+    float: left;
+    color: black;
+    padding: 3px;
+    text-decoration: none;
+    overflow: hidden;
+    font-size: 1rem;
+}
+
+/* navigation-page */
+
+
+/* start of header brand */
+#wrapper-header-brand {
+    background: #154360;
+    padding: 10px;
+    color: whitesmoke;
+}
+
+#logo-brand a {
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 3rem;
+    font-weight: bold;
+    font-family: "Consolas", "Monaco", "Bitstream Vera Sans Mono", "Courier New", Courier, monospace;
+}
+
+#navigation-user {
+    text-align: center;
+    padding-top: 12px;
+    font-size: 1.2rem;
+    background: #1b6d85;
+
+}
+
+/* end of header brand */
+
+.menu {
+    float: left;
+    width: 10%;
+    background: #2471A3;
+}
+
+.menuitem {
+    padding: 8px;
+    margin-top: 7px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.menuitem a {
+    color: whitesmoke;
+    font-family: "Consolas", "Menlo", "Courier", monospace;
+    font-size:;
+}
+
+.main {
+    float: left;
+    width: 90%;
+    padding: 0 20px;
+    overflow: hidden;
+    background: none;
+    font-size:;
+}
+
+/*for right sidebar*/
+/*.right {*/
+/*    background-color: lightblue;*/
+/*    float: left;*/
+/*    width: 20%;*/
+/*    padding: 10px 15px;*/
+/*    margin-top: 0px;*/
+/*}*/
+
+@media only screen and (max-width: 800px) {
+    /* For tablets: */
+    .main {
+        width: 80%;
+        padding: 0;
+    }
+
+    #logo-brand {
+        width: 100%;
+        text-align: center;
+    }
+
+    #navigation-user {
+        display: none;
+    }
+
+    .right {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    /* For mobile phones: */
+    .menu, .main, .right {
+        width: 100%;
+    }
+
+    #navigation-user {
+        display: none;
+    }
+
+    #logo-brand {
+        text-align: center;
+    }
+}
+
+#panel-main-content {
+    padding: 5px;
+}
+
+/*start of wrapper-upload*/
+.wraper-upload-preview {
+    display: flex;
+    justify-content: center;
+}
+
+.upload-preview {
+    display: flex;
+    justify-content: center;
+    width: 25%;
+}
+
+#form-upload {
+    margin-right: 25%;
+    margin-left: 25%;
+}
+
+#upload {
+    opacity: 0;
+}
+
+#upload-label {
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    transform: translateY(-50%);
+}
+
+.image-area {
+    border: 2px dashed rgba(255, 255, 255, 0.7);
+    padding: 1rem;
+    position: relative;
+}
+
+.image-area::before {
+    content: 'Uploaded image result';
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 0.8rem;
+    z-index: 1;
+}
+
+.image-area img {
+    z-index: 2;
+    position: relative;
+}
+
+/*end of wrapper-upload*/
+
+.footer {
+    /*width: 100%;*/
+    /*text-align: center;*/
+    /*padding: 10px;*/
+    /*height: 100px;*/
+}
+
+
+/*start of error404 page*/
+.error404 {
+    margin: 0 auto;
+    text-align: center;
+}
+
+.error404 .error-code {
+    bottom: 60%;
+    color: #4686CC;
+    font-size: 96px;
+    line-height: 100px;
+    font-weight: bold;
+}
+
+.error404 .error-desc {
+    font-size: 12px;
+    color: #647788;
+}
+
+.error404 .m-b-10 {
+    margin-bottom: 10px !important;
+}
+
+.error404 .m-b-20 {
+    margin-bottom: 20px !important;
+}
+
+.error404 .m-t-20 {
+    margin-top: 20px !important;
+}
+
+/*end of error404 page*/
+
+/*start of navigation bar*/
+.navigation-bar {
+    height: 25px;
+    width: 25px;
+    background-color: whitesmoke;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 5px 8px 5px 5px;
+    text-align: center;
+}
+
+.navigation-bar a:hover {
+    color: #2aabd2;
+    data-toggle: "tooltop";
+    data-placement: "bottom";
+    title: "add user";
+}
+
+.navigation-bar a {
+    text-decoration: none;
+    color: #1b6d85;
+}
+
+/*end of navigation-bar*/
+
+.kv-avatar .krajee-default.file-preview-frame, .kv-avatar .krajee-default.file-preview-frame:hover {
+    margin: 0;
+    padding: 0;
+    border: none;
+    box-shadow: none;
+    text-align: center;
+}
+
+/*start of form upload update user*/
+.kv-avatar {
+    display: inline-block;
+}
+
+.kv-avatar .file-input {
+    display: table-cell;
+    width: 213px;
+}
+
+.kv-reqd {
+    color: red;
+    font-family: monospace;
+    font-weight: normal;
+}
+
+/*end of form upload update user*/
+
+/*start of import file users*/
+#userexportModal {
+    margin: 10px;
+}
+
+/*end of import file users*/

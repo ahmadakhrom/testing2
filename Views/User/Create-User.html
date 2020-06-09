@@ -1,0 +1,69 @@
+{{define "CreateUser"}}
+    {{template "headers"}}
+    {{template "sidebars"}}
+    <div class="container">
+        <div class="row" style="margin-top: 50px">
+            <div class='col-md-3'></div>
+            <div class="col-md-6">
+                <div class="login-box well">
+                    <form action="/admin/user/store" method="POST">
+                        <legend style="text-align: center">Sign Up</legend>
+                        <div class="form-group">
+                            Foto
+                            <input value="" id="ImageUser" placeholder="Your Image" name="ImageUser" type="file"
+                                   class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            Username
+                            <input value='' id="Username" placeholder="Username" name="Username" type="text"
+                                   class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            Password
+                            <input id="Password" value='' placeholder="Password" name="Password" type="password"
+                                   class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            First Name
+                            <input value='' id="FirstName" placeholder="Firstname" name="Firstname" type="text"
+                                   class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            Lastname
+                            <input value='' id="Lastname" placeholder="Lastname" name="Lastname" type="text"
+                                   class="form-control"/>
+                        </div>
+                        <div class="form-group">
+                            Address
+                            <input value='' id="Address" placeholder="Address" name="Address" type="text"
+                                   class="form-control"/>
+                        </div>
+                        {{/*                        <p style="text-align: center; color: dodgerblue">*/}}
+                        {{/*                            {{.user_registered}}*/}}
+                        {{/*                        </p>*/}}
+                        {{/*                        <p style="text-align: center; color: red">*/}}
+                        {{/*                            {{ .error_username}}*/}}
+                        {{/*                            {{ .error_password}}*/}}
+                        {{/*                            {{ .error_privilege}}*/}}
+                        {{/*                        </p>*/}}
+                        <div class="form-group">
+                            <input type="submit" class="btn btn-default btn-login-submit btn-block m-t-md"
+                                   value="Signup"/>
+                        </div>
+                        <div class="form-group">
+                            <p class="text-center m-t-xs text-sm">Have an account?
+                                <a href="/">Login</a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class='col-md-3'></div>
+        </div>
+    </div>
+    <script>
+        swal({{.titleCreated}}, {{.textCreated}}, "success");
+    </script>
+    {{template "footers"}}
+{{end}}
+

@@ -1,0 +1,17 @@
+upload 
+crud
+randomize name file with set length
+encrypth password
+
+
+soon :
+dowload file
+validating ext file
+compressing file size
+inserting userid while file uploaded on table images
+show file
+secure with token : csrf cors
+for page request / http request
+try some middleware 
+make client page
+make staff page

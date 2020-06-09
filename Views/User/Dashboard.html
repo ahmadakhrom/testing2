@@ -1,0 +1,18 @@
+{{define "Dashboard"}}
+    {{template "headers"}}
+    {{template "sidebars"}}
+    <legend id="panel-main-content">
+        Information
+    </legend>
+    <p>
+  
+    </p>
+    <p>
+        Your name is.. {{.firstname}}
+    </p>
+    <p>
+        Your token is.. {{.token}}
+    </p>
+
+    {{template "footers"}}
+{{end}}

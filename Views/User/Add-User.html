@@ -1,0 +1,109 @@
+{{define "Add-User"}}
+    {{template "headers"}}
+    {{template "sidebars"}}
+
+    <div class="row">
+        <div class="col-sm-12" style="float: left">
+                <span class="navigation-bar">
+                    <a href="/admin/user/list" class="fa fa-user"></a>
+                </span>
+            <span class="navigation-bar">
+                    <a href="/admin/user/download" class="fa fa-download"></a>
+                </span>
+            </span>
+            <span class="navigation-bar">
+                    <a href="/admin/user/upload" class="fa fa-upload"></a>
+                </span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12 col-sm-12">
+            <hr class="line-navigation"
+                style="border-top: 1px solid silver; border-bottom: 1px solid wh; width:100%; margin-top:0">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4" style="display: flex;justify-content: center;">
+            <div class="d" style="margin: 5px;">
+                <form class="form form-vertical" action="/admin/user/store" method="POST"
+                      enctype="multipart/form-data">
+                    <input id="imageUser" name="imageUser" type="file"
+                           value="">
+                    <span class="text-danger"
+                          id="span_foto_warung">
+                            </span>
+                    <div class="kv-avatar-hint">
+                        <div id="kv-avatar-errors-1" class="center-block" style="max-width: 300px;display:none">
+                        </div>
+                    </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="ds" style="margin: 5px;margin: 5px;">
+                <div class="form-group">
+                    Username
+                    <input value="" id="Username" placeholder="Username" name="Username" type="text"
+                           class="form-control" maxlength="30"/>
+                </div>
+                <div class="form-group">
+                    Password
+                    <input id="Password" value="" placeholder="Password" name="Password" type="password"
+                           class="form-control" maxlength="30" required/>
+                </div>
+                <div class="form-group">
+                    First Name
+                    <input value='' id="FirstName" placeholder="Firstname" name="Firstname" type="text"
+                           class="form-control"
+                           maxlength="30"/>
+                </div>
+                <div class="form-group">
+                    Lastname
+                    <input value='' id="Lastname" placeholder="Lastname" name="Lastname" type="text"
+                           class="form-control"
+                           maxlength="30"/>
+                </div>
+                <div class="form-group">
+                    Address
+                    <textarea class="form-control" value="" id="Address" name="Address" rows="3"
+                              maxlength="200"></textarea>
+                </div>
+
+                <div class="form-group" style="float: right">
+                    <input type="submit" class="btn btn-success btn-login-submit btn-block m-t-md" value="Save"
+                           style="width:100px;float: left"/>
+                    &nbsp;
+                    <a class="btn btn-danger" href="/admin/list-user"
+                       style="width: 100px;float: leftx">Cancel</a>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        jQuery(function ($) {
+            $("#imageUser").fileinput({
+                initialPreview: [""],
+                initialPreviewConfig: [{
+                    key: "",
+                    _token: ""
+                },],
+                initialPreviewAsData: true,
+                showUpload: false,
+                showCaption: false,
+                showClose: false,
+                showRemove: false,
+                maxFileCount: 1,
+                elErrorContainer: '#kartik-file-errors',
+                allowedFileExtensions: ["jpg", "png", "jpeg"],
+                // overwriteInitial: false,
+                deleteUrl: ""
+            });
+        });
+    </script>
+    {{template "footers"}}
+{{end}}
+

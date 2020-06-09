@@ -1,0 +1,30 @@
+{{define "books"}}
+    {{template "Header"}}
+    {{template "Header-Brand"}}
+    {{template "Sidebar"}}
+
+    <div class="row">
+        <div class="col-sm-12" style="float: left">
+                <span class="navigation-bar">
+                    <a href="/admin/user/list" class="fa fa-book"></a>
+                </span>
+            <span class="navigation-bar">
+                    <a href="/admin/user/download" class="fa fa-download"></a>
+                </span>
+            </span>
+            <span class="navigation-bar">
+                    <a href="/admin/user/upload" class="fa fa-upload"></a>
+                </span>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-12">
+            <hr class="line-navigation"
+                style="border-top: 1px solid silver; border-bottom: 1px solid wh; width:100%; margin-top:0">
+        </div>
+    </div>
+
+    {{template "Footer"}}
+{{end}}
+

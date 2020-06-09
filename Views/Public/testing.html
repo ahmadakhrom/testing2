@@ -1,0 +1,16 @@
+{{define "testing"}}
+    {{template "Header"}}
+    {{template "Header-Brand"}}
+    <div class="container-fluid">
+        <p style="text-align: center">
+            page 1
+        </p>
+        <p style="text-align: center">
+            response token : {{.name}}
+        </p>
+        <p style="text-align: center">
+            <a href="/testing">to next page..</a>
+        </p>
+    </div>
+    {{template "Footer"}}
+{{end}}
